@@ -1,6 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Header = props => (
+//stateless component: dus geen this! arrow function maakt return overbodig
+
+const Header = (props) => (
   <header className="top">
     <h1>
       Catch
@@ -15,5 +18,11 @@ const Header = props => (
     </h3>
   </header>
 );
+
+
+// in een stateless component definieer je proptypes onderaan op deze manier
+Header.propTypes = {
+  tagline: PropTypes.string.isRequired,
+};
 
 export default Header;
